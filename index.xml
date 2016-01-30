@@ -58,16 +58,6 @@
     </item>
     
     <item>
-      <title>Search results</title>
-      <link>https://ping.flenny.net/search/</link>
-      <pubDate>Tue, 26 Jan 2016 16:46:46 +0100</pubDate>
-      <author>oliver.gut@flenny.net (Oliver Gut)</author>
-      <guid>https://ping.flenny.net/search/</guid>
-      <description>&lt;p&gt;&lt;gcse:searchresults-only linktarget=&#34;_parent&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>How to update proxmox lxc container templates</title>
       <link>https://ping.flenny.net/2016/how-to-update-proxmox-lxc-container-templates/</link>
       <pubDate>Thu, 21 Jan 2016 18:04:43 +0100</pubDate>
