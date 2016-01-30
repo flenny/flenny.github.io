@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://ping.flenny.net/</loc>
+    <lastmod>2016-01-26T16:46:46+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ping.flenny.net/2016/ssh-into-a-proxmox-lxc-container/</loc>
+    <lastmod>2016-01-26T16:46:46+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ping.flenny.net/search/</loc>
+    <lastmod>2016-01-26T16:46:46+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ping.flenny.net/2016/how-to-update-proxmox-lxc-container-templates/</loc>
+    <lastmod>2016-01-21T18:04:43+01:00</lastmod>
+  </url>
+  
+</urlset>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lxc on ping.flenny.net</title>
+    <link>https://ping.flenny.net/tags/lxc/</link>
+    <description>Recent content in Lxc on ping.flenny.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>oliver.gut@flenny.net (Oliver Gut)</managingEditor>
+    <webMaster>oliver.gut@flenny.net (Oliver Gut)</webMaster>
+    <lastBuildDate>Tue, 26 Jan 2016 16:46:46 +0100</lastBuildDate>
+    <atom:link href="https://ping.flenny.net/tags/lxc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SSH into a proxmox lxc container</title>
+      <link>https://ping.flenny.net/2016/ssh-into-a-proxmox-lxc-container/</link>
+      <pubDate>Tue, 26 Jan 2016 16:46:46 +0100</pubDate>
+      <author>oliver.gut@flenny.net (Oliver Gut)</author>
+      <guid>https://ping.flenny.net/2016/ssh-into-a-proxmox-lxc-container/</guid>
+      <description>
+
+&lt;p&gt;By default it&amp;rsquo;s not possible to establish a direct ssh connection to a proxmox lxc container. In order to ssh into a container there are two options available. Either you attach to the container through proxmox host or you allow login with password on the specific container.&lt;/p&gt;
+
+&lt;h2 id=&#34;option-1-attach-to-the-container-through-proxmox-host:5afcdfa0a16694e52c79ef330542c0e9&#34;&gt;Option #1: Attach to the container through proxmox host&lt;/h2&gt;
+
+&lt;p&gt;Login to your proxmox host and attach to the container with the following command.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;lxc-attach --name 109
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The name of the container corresponds to the unique VM ID which you can see in the container&amp;rsquo;s description.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ping.flenny.net/images/post/ssh-into-container-001.png&#34; alt=&#34;ssh into a container&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ping.flenny.net/images/post/ssh-into-container.png&#34; alt=&#34;ssh into a container&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;option-2-allow-login-with-password-on-the-specific-container:5afcdfa0a16694e52c79ef330542c0e9&#34;&gt;Option #2: Allow login with password on the specific container&lt;/h2&gt;
+
+&lt;p&gt;By default a proxmox lxc container allows root login only with public key authentication. To login to a container with username/password login to your proxmox host and attach to the container with the following command.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;lxc-attach --name 109
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Open &lt;code&gt;sshd_config&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nano /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and change the line &lt;code&gt;PermitRootLogin without-password&lt;/code&gt; to &lt;code&gt;PermitRootLogin yes&lt;/code&gt;. Exit nano with &lt;code&gt;Ctrl+X&lt;/code&gt; and save changes with &lt;code&gt;y&lt;/code&gt; and &lt;code&gt;ENTER&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ping.flenny.net/images/post/ssh-into-container-002.png&#34; alt=&#34;ssh into a container&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Restart ssh service for the changes to take effect.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;service ssh restart
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to update proxmox lxc container templates</title>
+      <link>https://ping.flenny.net/2016/how-to-update-proxmox-lxc-container-templates/</link>
+      <pubDate>Thu, 21 Jan 2016 18:04:43 +0100</pubDate>
+      <author>oliver.gut@flenny.net (Oliver Gut)</author>
+      <guid>https://ping.flenny.net/2016/how-to-update-proxmox-lxc-container-templates/</guid>
+      <description>&lt;p&gt;By default lxc container templates are not available after installing Proxmox Virtual Environment. In order to enable templates for Ubuntu, Joomla, OwnCloud, WordRress or OpenVPN run the following command on your hosts console.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pveam update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will find the templates right on your local storage &amp;gt; content &amp;gt; templates.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ping.flenny.net/images/post/pve-lxc-update.png&#34; alt=&#34;lxc container templates&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
