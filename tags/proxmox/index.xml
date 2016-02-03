@@ -19,6 +19,15 @@
       <guid>https://ping.flenny.net/2016/ssh-into-a-proxmox-lxc-container/</guid>
       <description>
 
+
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/logo/proxmox.png&#34; alt=&#34;Proxmox&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
 &lt;p&gt;By default it&amp;rsquo;s not possible to establish a direct SSH connection to a proxmox LXC container. In order to SSH into a container there are two options available. Either you attach to the container through proxmox host or you allow login with password on the specific container.&lt;/p&gt;
 
 &lt;h2 id=&#34;option-1-attach-to-the-container-through-proxmox-host:5afcdfa0a16694e52c79ef330542c0e9&#34;&gt;Option #1: Attach to the container through proxmox host&lt;/h2&gt;
@@ -65,7 +74,16 @@
       <pubDate>Thu, 21 Jan 2016 18:04:43 +0100</pubDate>
       <author>oliver.gut@flenny.net (Oliver Gut)</author>
       <guid>https://ping.flenny.net/2016/how-to-update-proxmox-lxc-container-templates/</guid>
-      <description>&lt;p&gt;By default LXC container templates are not available after installing Proxmox Virtual Environment. In order to enable templates for Ubuntu, Joomla, OwnCloud, WordRress or OpenVPN run the following command on your host&amp;rsquo;s console.&lt;/p&gt;
+      <description>
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/logo/proxmox.png&#34; alt=&#34;Proxmox&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;By default LXC container templates are not available after installing Proxmox Virtual Environment. In order to enable templates for Ubuntu, Joomla, OwnCloud, WordRress or OpenVPN run the following command on your host&amp;rsquo;s console.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;pveam update
 &lt;/code&gt;&lt;/pre&gt;

@@ -3,8 +3,13 @@
   
   <url>
     <loc>https://ping.flenny.net/</loc>
-    <lastmod>2016-01-31T22:31:43+01:00</lastmod>
+    <lastmod>2016-02-03T19:37:18+01:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ping.flenny.net/2016/nginx-redirect-any-subdomain-http-or-https-to-a-single-subdomain/</loc>
+    <lastmod>2016-02-03T19:37:18+01:00</lastmod>
   </url>
   
   <url>

@@ -8,8 +8,62 @@
     <language>en-us</language>
     <managingEditor>oliver.gut@flenny.net (Oliver Gut)</managingEditor>
     <webMaster>oliver.gut@flenny.net (Oliver Gut)</webMaster>
-    <lastBuildDate>Sun, 31 Jan 2016 22:31:43 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 03 Feb 2016 19:37:18 +0100</lastBuildDate>
     <atom:link href="https://ping.flenny.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Nginx: Redirect any subdomain http or https to a single subdomain</title>
+      <link>https://ping.flenny.net/2016/nginx-redirect-any-subdomain-http-or-https-to-a-single-subdomain/</link>
+      <pubDate>Wed, 03 Feb 2016 19:37:18 +0100</pubDate>
+      <author>oliver.gut@flenny.net (Oliver Gut)</author>
+      <guid>https://ping.flenny.net/2016/nginx-redirect-any-subdomain-http-or-https-to-a-single-subdomain/</guid>
+      <description>
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/logo/nginx.png&#34; alt=&#34;Nginx&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Today I had a use case where I wanted to redirect any subdomain at any scheme (http or https) to a single https subdomain &lt;a href=&#34;https://ping.flenny.net&#34;&gt;https://ping.flenny.net&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.flenny.net&#34;&gt;http://blog.flenny.net&lt;/a&gt; should redirect to &lt;a href=&#34;https://ping.flenny.net&#34;&gt;https://ping.flenny.net&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.flenny.net&#34;&gt;https://www.flenny.net&lt;/a&gt; should redirect to &lt;a href=&#34;https://ping.flenny.net&#34;&gt;https://ping.flenny.net&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In order to redirect both schemes (http and https) to a single subdomain you have to setup two &lt;code&gt;server&lt;/code&gt; blocks. The first one catches all the traffic to any scheme (&lt;code&gt;listen 80;  listen 443&lt;/code&gt;) at any subdomain (&lt;code&gt;*.flenny.net&lt;/code&gt;). The second one listens only on port &lt;code&gt;443&lt;/code&gt; and the specific subdomain &lt;code&gt;ping.flenny.net&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;server {
+    listen 80;
+    listen 443 ssl;
+    server_name *.flenny.net;
+    return 301 https://ping.flenny.net$request_uri;
+}
+
+server {
+    listen 443 default ssl;
+    server_name ping.flenny.net;
+
+    root /var/www/flenny;
+    index index.html index.htm;
+
+    ssl on;
+    ssl_certificate         path/to/ssl.crt;
+    ssl_certificate_key     path/to/ssl.key;
+
+    location / {
+        proxy_pass https://x.y.z;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For a specific port you can only have one ssl configuration section (&lt;code&gt;ssl_certificate&lt;/code&gt;, &lt;code&gt;ssl_certificate_key&lt;/code&gt;). As shown in the example above you use the keyword &lt;code&gt;default&lt;/code&gt; to flag the appropriate &lt;code&gt;server&lt;/code&gt; block.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; In order to properly redirect e.g. &lt;a href=&#34;https://blog.flenny.net&#34;&gt;https://blog.flenny.net&lt;/a&gt; to &lt;a href=&#34;https://ping.flenny.net&#34;&gt;https://ping.flenny.net&lt;/a&gt; you must have a valid ssl certificate for both subdomains.&lt;/p&gt;
+
+&lt;p&gt;A full example of a working Nginx configuration you can get &lt;a href=&#34;https://gist.github.com/flenny/de4b6ab465ed5b1c6886&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Disable SSH connections over IPv6</title>
@@ -37,6 +91,15 @@ ListenAddress 0.0.0.0
       <author>oliver.gut@flenny.net (Oliver Gut)</author>
       <guid>https://ping.flenny.net/2016/ssh-into-a-proxmox-lxc-container/</guid>
       <description>
+
+
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/logo/proxmox.png&#34; alt=&#34;Proxmox&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
 
 &lt;p&gt;By default it&amp;rsquo;s not possible to establish a direct SSH connection to a proxmox LXC container. In order to SSH into a container there are two options available. Either you attach to the container through proxmox host or you allow login with password on the specific container.&lt;/p&gt;
 
@@ -84,7 +147,16 @@ ListenAddress 0.0.0.0
       <pubDate>Thu, 21 Jan 2016 18:04:43 +0100</pubDate>
       <author>oliver.gut@flenny.net (Oliver Gut)</author>
       <guid>https://ping.flenny.net/2016/how-to-update-proxmox-lxc-container-templates/</guid>
-      <description>&lt;p&gt;By default LXC container templates are not available after installing Proxmox Virtual Environment. In order to enable templates for Ubuntu, Joomla, OwnCloud, WordRress or OpenVPN run the following command on your host&amp;rsquo;s console.&lt;/p&gt;
+      <description>
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/logo/proxmox.png&#34; alt=&#34;Proxmox&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;By default LXC container templates are not available after installing Proxmox Virtual Environment. In order to enable templates for Ubuntu, Joomla, OwnCloud, WordRress or OpenVPN run the following command on your host&amp;rsquo;s console.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;pveam update
 &lt;/code&gt;&lt;/pre&gt;
