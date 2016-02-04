@@ -12,7 +12,7 @@
     <atom:link href="https://ping.flenny.net/tags/lxc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>SSH into a proxmox LXC container</title>
+      <title>SSH into a Proxmox LXC container</title>
       <link>https://ping.flenny.net/2016/ssh-into-a-proxmox-lxc-container/</link>
       <pubDate>Tue, 26 Jan 2016 16:46:46 +0100</pubDate>
       <author>oliver.gut@flenny.net (Oliver Gut)</author>
@@ -28,11 +28,11 @@
 &lt;/figure&gt;
 
 
-&lt;p&gt;By default it&amp;rsquo;s not possible to establish a direct SSH connection to a proxmox LXC container. In order to SSH into a container there are two options available. Either you attach to the container through proxmox host or you allow login with password on the specific container.&lt;/p&gt;
+&lt;p&gt;By default it&amp;rsquo;s not possible to establish a direct SSH connection to a Proxmox LXC container. In order to SSH into a container there are two options available. Either you attach to the container through Proxmox host or you allow login with password on the specific container.&lt;/p&gt;
 
-&lt;h2 id=&#34;option-1-attach-to-the-container-through-proxmox-host:5afcdfa0a16694e52c79ef330542c0e9&#34;&gt;Option #1: Attach to the container through proxmox host&lt;/h2&gt;
+&lt;h2 id=&#34;option-1-attach-to-the-container-through-proxmox-host:5afcdfa0a16694e52c79ef330542c0e9&#34;&gt;Option #1: Attach to the container through Proxmox host&lt;/h2&gt;
 
-&lt;p&gt;Login to your proxmox host and attach to the container with the following command.&lt;/p&gt;
+&lt;p&gt;Login to your Proxmox host and attach to the container with the following command.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;lxc-attach --name 109
 &lt;/code&gt;&lt;/pre&gt;
@@ -45,7 +45,7 @@
 
 &lt;h2 id=&#34;option-2-allow-login-with-password-on-the-specific-container:5afcdfa0a16694e52c79ef330542c0e9&#34;&gt;Option #2: Allow login with password on the specific container&lt;/h2&gt;
 
-&lt;p&gt;By default a proxmox LXC container allows root login only with public key authentication. To login to a container with username/password login to your proxmox host and attach to the container with the following command.&lt;/p&gt;
+&lt;p&gt;By default a Proxmox LXC container allows root login only with public key authentication. To login to a container with username/password login to your Proxmox host and attach to the container with the following command.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;lxc-attach --name 109
 &lt;/code&gt;&lt;/pre&gt;
@@ -69,21 +69,22 @@
     </item>
     
     <item>
-      <title>How to update proxmox LXC container templates</title>
+      <title>How to update Proxmox LXC container templates</title>
       <link>https://ping.flenny.net/2016/how-to-update-proxmox-lxc-container-templates/</link>
       <pubDate>Thu, 21 Jan 2016 18:04:43 +0100</pubDate>
       <author>oliver.gut@flenny.net (Oliver Gut)</author>
       <guid>https://ping.flenny.net/2016/how-to-update-proxmox-lxc-container-templates/</guid>
-      <description>
+      <description>&lt;p&gt;&lt;script src=&#34;//gist.github.com/spf13/7896402.js&#34;&gt;&lt;/script&gt;
+
 &lt;figure class=&#34;img-responsive center-block&#34;&gt;
     
         &lt;img src=&#34;https://ping.flenny.net/images/post/logo/proxmox.png&#34; alt=&#34;Proxmox&#34; /&gt;
     
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
-
-&lt;p&gt;By default LXC container templates are not available after installing Proxmox Virtual Environment. In order to enable templates for Ubuntu, Joomla, OwnCloud, WordRress or OpenVPN run the following command on your host&amp;rsquo;s console.&lt;/p&gt;
+&lt;p&gt;By default LXC container templates are not available after installing Proxmox Virtual Environment (PVE). In order to enable templates for Ubuntu, Joomla, OwnCloud, WordRress or OpenVPN run the following command on your host&amp;rsquo;s console.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;pveam update
 &lt;/code&gt;&lt;/pre&gt;
