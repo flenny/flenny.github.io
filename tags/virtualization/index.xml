@@ -64,7 +64,7 @@
 &lt;pre&gt;&lt;code&gt;service ssh restart
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Try to establish a direct SSH connection to your container&amp;rsquo;s IP (If you don&amp;rsquo;t know the container&amp;rsquo;s IP you can run &lt;code&gt;ifconfig&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Try to establish a direct SSH connection to your container&amp;rsquo;s IP (If you don&amp;rsquo;t know the container&amp;rsquo;s IP run &lt;code&gt;ifconfig&lt;/code&gt;).&lt;/p&gt;
 </description>
     </item>
     
@@ -90,7 +90,14 @@
 
 &lt;p&gt;You will find the templates right on your local storage &amp;gt; content &amp;gt; templates.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ping.flenny.net/images/post/pve-lxc-update.png&#34; alt=&#34;lxc container templates&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/pve-lxc-update.png&#34; alt=&#34;LXC container templates&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
 </description>
     </item>
     
