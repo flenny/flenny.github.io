@@ -147,15 +147,14 @@ ListenAddress 0.0.0.0
       <pubDate>Thu, 21 Jan 2016 18:04:43 +0100</pubDate>
       <author>oliver.gut@flenny.net (Oliver Gut)</author>
       <guid>https://ping.flenny.net/2016/how-to-update-proxmox-lxc-container-templates/</guid>
-      <description>&lt;p&gt;&lt;script src=&#34;//gist.github.com/spf13/7896402.js&#34;&gt;&lt;/script&gt;
-
+      <description>
 &lt;figure class=&#34;img-responsive center-block&#34;&gt;
     
         &lt;img src=&#34;https://ping.flenny.net/images/post/logo/proxmox.png&#34; alt=&#34;Proxmox&#34; /&gt;
     
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;By default LXC container templates are not available after installing Proxmox Virtual Environment (PVE). In order to enable templates for Ubuntu, Joomla, OwnCloud, WordRress or OpenVPN run the following command on your host&amp;rsquo;s console.&lt;/p&gt;
 
