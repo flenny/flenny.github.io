@@ -3,8 +3,13 @@
   
   <url>
     <loc>https://ping.flenny.net/</loc>
-    <lastmod>2016-02-17T18:24:49+01:00</lastmod>
+    <lastmod>2016-02-18T14:04:50+01:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ping.flenny.net/2016/http-to-https-with-url-rewrite-module-in-iis/</loc>
+    <lastmod>2016-02-18T14:04:50+01:00</lastmod>
   </url>
   
   <url>

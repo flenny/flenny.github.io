@@ -8,8 +8,58 @@
     <language>en-us</language>
     <managingEditor>oliver.gut@flenny.net (Oliver Gut)</managingEditor>
     <webMaster>oliver.gut@flenny.net (Oliver Gut)</webMaster>
-    <lastBuildDate>Wed, 17 Feb 2016 18:24:49 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 18 Feb 2016 14:04:50 +0100</lastBuildDate>
     <atom:link href="https://ping.flenny.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>HTTP to HTTPS with URL rewrite module in IIS</title>
+      <link>https://ping.flenny.net/2016/http-to-https-with-url-rewrite-module-in-iis/</link>
+      <pubDate>Thu, 18 Feb 2016 14:04:50 +0100</pubDate>
+      <author>oliver.gut@flenny.net (Oliver Gut)</author>
+      <guid>https://ping.flenny.net/2016/http-to-https-with-url-rewrite-module-in-iis/</guid>
+      <description>
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/logo/iis.png&#34; alt=&#34;IIS 9&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;First download &lt;a href=&#34;http://go.microsoft.com/fwlink/?LinkId=255386&#34;&gt;Microsofts Web Platform Installer 5.0&lt;/a&gt;. It&amp;rsquo;s a free tool that makes getting the latest components for Internet Information Services (IIS) easy. In Web Platform Installer search for &amp;lsquo;url rewrite&amp;rsquo; and and install the one and only search result &amp;lsquo;URL Rewrite 2.0&amp;rsquo;. Restart IIS in order to make URL Rewrite module visible as shown below.&lt;/p&gt;
+
+
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/iis-rewrite-module.png&#34; alt=&#34;IIS URL Rewrite module&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;Create a new blank rule with the following adjustments (leave default values):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: e.g. &amp;lsquo;Redirect to HTTPS&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Match URL&lt;/strong&gt;: Request URL matches the pattern using regular expressions. Pattern: &lt;code&gt;(.*)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Conditions&lt;/strong&gt;: Add new. Condition input &lt;code&gt;{HTTPS}&lt;/code&gt;, pattern &lt;code&gt;^OFF$&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action&lt;/strong&gt;: Action type Redirect, Redirect URL &lt;code&gt;https://{HTTP_HOST}/{R:1}&lt;/code&gt; redirect type 303&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apply and go back to rules overview.&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/iis-rewrite-module-001.png&#34; alt=&#34;IIS URL Rewrite module&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don&amp;rsquo;t forget to clear &amp;lsquo;Require SSL&amp;rsquo; checkbox in SSL settings in order to make the redirect working properly.&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Toggle WPF control visibility with DataTriggers</title>
