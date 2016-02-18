@@ -62,7 +62,7 @@
     </item>
     
     <item>
-      <title>Nginx: Redirect any subdomain http or https to a single subdomain</title>
+      <title>Redirect any subdomain http or https to a single subdomain in NGINX</title>
       <link>https://ping.flenny.net/2016/nginx-redirect-any-subdomain-http-or-https-to-a-single-subdomain/</link>
       <pubDate>Wed, 03 Feb 2016 19:37:18 +0100</pubDate>
       <author>oliver.gut@flenny.net (Oliver Gut)</author>
@@ -70,7 +70,7 @@
       <description>
 &lt;figure class=&#34;img-responsive center-block&#34;&gt;
     
-        &lt;img src=&#34;https://ping.flenny.net/images/post/logo/nginx.png&#34; alt=&#34;Nginx&#34; /&gt;
+        &lt;img src=&#34;https://ping.flenny.net/images/post/logo/nginx.png&#34; alt=&#34;NGINX&#34; /&gt;
     
     
 &lt;/figure&gt;
@@ -111,7 +111,7 @@
 
 &lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; In order to properly redirect e.g. &lt;a href=&#34;https://blog.flenny.net&#34;&gt;https://blog.flenny.net&lt;/a&gt; to &lt;a href=&#34;https://ping.flenny.net&#34;&gt;https://ping.flenny.net&lt;/a&gt; you must have a valid ssl certificate for both subdomains.&lt;/p&gt;
 
-&lt;p&gt;A full example of a working Nginx configuration you can get &lt;a href=&#34;https://gist.github.com/flenny/de4b6ab465ed5b1c6886&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A full example of a working NGINX configuration you can get &lt;a href=&#34;https://gist.github.com/flenny/de4b6ab465ed5b1c6886&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
