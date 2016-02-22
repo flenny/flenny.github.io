@@ -28,7 +28,7 @@
 &lt;/figure&gt;
 
 
-&lt;p&gt;By default it&amp;rsquo;s not possible to establish a direct SSH connection to a Proxmox LXC container. In order to SSH into a container there are two options available. Either you attach to the container through Proxmox host or you allow login with password on the specific container.&lt;p class=&#34;hey&#34;&gt;Type some code here&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;By default it&amp;rsquo;s not possible to establish a direct SSH connection to a Proxmox LXC container. In order to SSH into a container there are two options available. Either you attach to the container through Proxmox host or you allow login with password on the specific container.&lt;/p&gt;
 
 &lt;h2 id=&#34;option-1-attach-to-the-container-through-proxmox-host:5afcdfa0a16694e52c79ef330542c0e9&#34;&gt;Option #1: Attach to the container through Proxmox host&lt;/h2&gt;
 
