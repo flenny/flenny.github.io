@@ -3,8 +3,13 @@
   
   <url>
     <loc>https://ping.flenny.net/</loc>
-    <lastmod>2016-02-18T14:04:50+01:00</lastmod>
+    <lastmod>2016-03-09T21:05:00+01:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ping.flenny.net/2016/owncloud-9-fix-error-index-php-was-not-found/</loc>
+    <lastmod>2016-03-09T21:05:00+01:00</lastmod>
   </url>
   
   <url>

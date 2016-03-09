@@ -8,11 +8,34 @@
     <language>en-us</language>
     <managingEditor>oliver.gut@flenny.net (Oliver Gut)</managingEditor>
     <webMaster>oliver.gut@flenny.net (Oliver Gut)</webMaster>
-    <lastBuildDate>Thu, 18 Feb 2016 14:04:50 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 09 Mar 2016 21:05:00 +0100</lastBuildDate>
     <atom:link href="https://ping.flenny.net/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>HTTP to HTTPS with URL rewrite module in IIS</title>
+      <title>Fix error &#39;index.php was not found on this server&#39; after upgrading ownCloud to version 9</title>
+      <link>https://ping.flenny.net/2016/owncloud-9-fix-error-index-php-was-not-found/</link>
+      <pubDate>Wed, 09 Mar 2016 21:05:00 +0100</pubDate>
+      <author>oliver.gut@flenny.net (Oliver Gut)</author>
+      <guid>https://ping.flenny.net/2016/owncloud-9-fix-error-index-php-was-not-found/</guid>
+      <description>
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/missing-index-php.png&#34; alt=&#34;ownCloud error message&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;If you just upgraded ownCloud on Ubuntu 15.10 to version 9 (using &lt;code&gt;apt-get dist-upgrade&lt;/code&gt;),
+you probably get the error message shown above. Adding &lt;code&gt;/index.php&lt;/code&gt; manually still redirects to the ownCloud login screen.&lt;/p&gt;
+
+&lt;p&gt;As mentioned &lt;a href=&#34;https://github.com/owncloud/core/issues/22970&#34;&gt;here&lt;/a&gt; open &lt;code&gt;.htaccess&lt;/code&gt; in &lt;code&gt;/var/www/owncloud&lt;/code&gt; an comment out
+the line &lt;code&gt;RewriteRule .* index.php [PT,E=PATH_INFO:$1]&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Redirect HTTP to HTTPS with URL rewrite module in IIS</title>
       <link>https://ping.flenny.net/2016/http-to-https-with-url-rewrite-module-in-iis/</link>
       <pubDate>Thu, 18 Feb 2016 14:04:50 +0100</pubDate>
       <author>oliver.gut@flenny.net (Oliver Gut)</author>
@@ -95,7 +118,7 @@
     </item>
     
     <item>
-      <title>Redirect any subdomain http or https to a single subdomain in NGINX</title>
+      <title>Redirect any subdomain http or https to a single subdomain with NGINX</title>
       <link>https://ping.flenny.net/2016/nginx-redirect-any-subdomain-http-or-https-to-a-single-subdomain/</link>
       <pubDate>Wed, 03 Feb 2016 19:37:18 +0100</pubDate>
       <author>oliver.gut@flenny.net (Oliver Gut)</author>

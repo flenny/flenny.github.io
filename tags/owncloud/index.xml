@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ubuntu on ping.flenny.net</title>
-    <link>https://ping.flenny.net/tags/ubuntu/</link>
-    <description>Recent content in Ubuntu on ping.flenny.net</description>
+    <title>Owncloud on ping.flenny.net</title>
+    <link>https://ping.flenny.net/tags/owncloud/</link>
+    <description>Recent content in Owncloud on ping.flenny.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>oliver.gut@flenny.net (Oliver Gut)</managingEditor>
     <webMaster>oliver.gut@flenny.net (Oliver Gut)</webMaster>
     <lastBuildDate>Wed, 09 Mar 2016 21:05:00 +0100</lastBuildDate>
-    <atom:link href="https://ping.flenny.net/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ping.flenny.net/tags/owncloud/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Fix error &#39;index.php was not found on this server&#39; after upgrading ownCloud to version 9</title>
@@ -31,25 +31,6 @@ you probably get the error message shown above. Adding &lt;code&gt;/index.php&lt
 
 &lt;p&gt;As mentioned &lt;a href=&#34;https://github.com/owncloud/core/issues/22970&#34;&gt;here&lt;/a&gt; open &lt;code&gt;.htaccess&lt;/code&gt; in &lt;code&gt;/var/www/owncloud&lt;/code&gt; an comment out
 the line &lt;code&gt;RewriteRule .* index.php [PT,E=PATH_INFO:$1]&lt;/code&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Disable SSH connections over IPv6</title>
-      <link>https://ping.flenny.net/2016/disable-ssh-connections-over-ipv6/</link>
-      <pubDate>Sun, 31 Jan 2016 22:31:43 +0100</pubDate>
-      <author>oliver.gut@flenny.net (Oliver Gut)</author>
-      <guid>https://ping.flenny.net/2016/disable-ssh-connections-over-ipv6/</guid>
-      <description>&lt;p&gt;If a network interface offers IPv4 as well as IPv6, by default ubuntu&amp;rsquo;s SSH server listens on both IP versions. In order to restrict access to protocol version 4 you have to comment in the line &lt;code&gt;#ListenAddress 0.0.0.0&lt;/code&gt; in your &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-vim&#34;&gt;#ListenAddress ::
-ListenAddress 0.0.0.0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Restart SSH service for the changes to take effect.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo service sshd restart
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
