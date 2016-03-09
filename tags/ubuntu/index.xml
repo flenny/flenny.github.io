@@ -30,7 +30,7 @@
 you probably get the error message shown above. Adding &lt;code&gt;/index.php&lt;/code&gt; manually still redirects to the ownCloud login screen.&lt;/p&gt;
 
 &lt;p&gt;As mentioned &lt;a href=&#34;https://github.com/owncloud/core/issues/22970&#34;&gt;here&lt;/a&gt; open &lt;code&gt;.htaccess&lt;/code&gt; in &lt;code&gt;/var/www/owncloud&lt;/code&gt; an comment out
-the line &lt;code&gt;RewriteRule .* index.php [PT,E=PATH_INFO:$1]&lt;/code&gt;&lt;/p&gt;
+the line &lt;code&gt;RewriteRule .* index.php [PT,E=PATH_INFO:$1]&lt;/code&gt; and restart apache with &lt;code&gt;service apache2 restart&lt;/code&gt;.&lt;/p&gt;
 </description>
     </item>
     
