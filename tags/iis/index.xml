@@ -26,7 +26,8 @@
 &lt;/figure&gt;
 
 
-&lt;p&gt;First download &lt;a href=&#34;http://go.microsoft.com/fwlink/?LinkId=255386&#34;&gt;Microsofts Web Platform Installer 5.0&lt;/a&gt;. It&amp;rsquo;s a free tool that makes getting the latest components for Internet Information Services (IIS) easy. In Web Platform Installer search for &amp;lsquo;url rewrite&amp;rsquo; and and install the one and only search result &amp;lsquo;URL Rewrite 2.0&amp;rsquo;. Restart IIS in order to make URL Rewrite module visible as shown below.&lt;/p&gt;
+&lt;p&gt;First download &lt;a href=&#34;http://go.microsoft.com/fwlink/?LinkId=255386&#34;&gt;Microsofts Web Platform Installer 5.0&lt;/a&gt;.
+It&amp;rsquo;s a free tool that makes getting the latest components for Internet Information Services (IIS) easy. In Web Platform Installer search for &amp;lsquo;url rewrite&amp;rsquo; and and install the one and only search result &amp;lsquo;URL Rewrite 2.0&amp;rsquo;. Restart IIS in order to make URL Rewrite module visible as shown below.&lt;/p&gt;
 
 
 &lt;figure class=&#34;img-responsive center-block&#34;&gt;

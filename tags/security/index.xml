@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nginx on ping.flenny.net</title>
-    <link>https://ping.flenny.net/tags/nginx/</link>
-    <description>Recent content in Nginx on ping.flenny.net</description>
+    <title>Security on ping.flenny.net</title>
+    <link>https://ping.flenny.net/tags/security/</link>
+    <description>Recent content in Security on ping.flenny.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>oliver.gut@flenny.net (Oliver Gut)</managingEditor>
     <webMaster>oliver.gut@flenny.net (Oliver Gut)</webMaster>
     <lastBuildDate>Tue, 15 Mar 2016 14:33:21 +0100</lastBuildDate>
-    <atom:link href="https://ping.flenny.net/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ping.flenny.net/tags/security/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Secure your website by adding some HTTP security headers with NGINX</title>
@@ -90,60 +90,6 @@ The pins are part of the result.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;add_header Public-Key-Pins &#39;pin-sha256=&amp;quot;xxx&amp;quot;; pin-sha256=&amp;quot;yyy&amp;quot;;
     pin-sha256=&amp;quot;zzz&amp;quot;; max-age=2592000; includeSubDomains&#39; always;
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Redirect any subdomain http or https to a single subdomain with NGINX</title>
-      <link>https://ping.flenny.net/2016/nginx-redirect-any-subdomain-http-or-https-to-a-single-subdomain/</link>
-      <pubDate>Wed, 03 Feb 2016 19:37:18 +0100</pubDate>
-      <author>oliver.gut@flenny.net (Oliver Gut)</author>
-      <guid>https://ping.flenny.net/2016/nginx-redirect-any-subdomain-http-or-https-to-a-single-subdomain/</guid>
-      <description>
-&lt;figure class=&#34;img-responsive center-block&#34;&gt;
-    
-        &lt;img src=&#34;https://ping.flenny.net/images/post/logo/nginx.png&#34; alt=&#34;NGINX&#34; /&gt;
-    
-    
-&lt;/figure&gt;
-
-
-&lt;p&gt;Today I had a use case where I wanted to redirect any subdomain at any scheme (http or https) to a single https subdomain &lt;a href=&#34;https://ping.flenny.net&#34;&gt;https://ping.flenny.net&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blog.flenny.net&#34;&gt;http://blog.flenny.net&lt;/a&gt; should redirect to &lt;a href=&#34;https://ping.flenny.net&#34;&gt;https://ping.flenny.net&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.flenny.net&#34;&gt;https://www.flenny.net&lt;/a&gt; should redirect to &lt;a href=&#34;https://ping.flenny.net&#34;&gt;https://ping.flenny.net&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;In order to redirect both schemes (http and https) to a single subdomain you have to setup two &lt;code&gt;server&lt;/code&gt; blocks. The first one catches all the traffic to any scheme (&lt;code&gt;listen 80;  listen 443&lt;/code&gt;) at any subdomain (&lt;code&gt;*.flenny.net&lt;/code&gt;). The second one listens only on port &lt;code&gt;443&lt;/code&gt; and the specific subdomain &lt;code&gt;ping.flenny.net&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;	server {
-		listen 80;
-		listen 443 ssl;
-		server_name *.flenny.net;
-		return 301 https://ping.flenny.net$request_uri;
-	}
-	
-	server {
-		listen 443 default ssl;
-		server_name ping.flenny.net;
-		
-		root /var/www/flenny;
-		index index.html index.htm;
-	
-		ssl on;
-		ssl_certificate			path/to/ssl.crt;
-		ssl_certificate_key		path/to/ssl.key;
-				
-		location / {
-			proxy_pass https://x.y.z;
-		}
-	}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For a specific port you can only have one ssl configuration section (&lt;code&gt;ssl_certificate&lt;/code&gt;, &lt;code&gt;ssl_certificate_key&lt;/code&gt;). As shown in the example above use the keyword &lt;code&gt;default&lt;/code&gt; to flag the appropriate &lt;code&gt;server&lt;/code&gt; block.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; In order to properly redirect e.g. &lt;a href=&#34;https://blog.flenny.net&#34;&gt;https://blog.flenny.net&lt;/a&gt; to &lt;a href=&#34;https://ping.flenny.net&#34;&gt;https://ping.flenny.net&lt;/a&gt; you must have a valid ssl certificate for both subdomains.&lt;/p&gt;
-
-&lt;p&gt;A full example of a working NGINX configuration you can get &lt;a href=&#34;https://gist.github.com/flenny/de4b6ab465ed5b1c6886&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

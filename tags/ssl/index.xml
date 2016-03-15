@@ -8,8 +8,90 @@
     <language>en-us</language>
     <managingEditor>oliver.gut@flenny.net (Oliver Gut)</managingEditor>
     <webMaster>oliver.gut@flenny.net (Oliver Gut)</webMaster>
-    <lastBuildDate>Thu, 18 Feb 2016 14:04:50 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 15 Mar 2016 14:33:21 +0100</lastBuildDate>
     <atom:link href="https://ping.flenny.net/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Secure your website by adding some HTTP security headers with NGINX</title>
+      <link>https://ping.flenny.net/2016/secure-your-website-by-adding-some-http-security-headers-with-nginx/</link>
+      <pubDate>Tue, 15 Mar 2016 14:33:21 +0100</pubDate>
+      <author>oliver.gut@flenny.net (Oliver Gut)</author>
+      <guid>https://ping.flenny.net/2016/secure-your-website-by-adding-some-http-security-headers-with-nginx/</guid>
+      <description>
+
+
+&lt;figure class=&#34;pull-right&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/secure-http-headers.svg&#34; alt=&#34;A&amp;#43;&#34; width=&#34;190em&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;In order to make your site a more secure place, it&amp;rsquo;s recommended to add
+some HTTP security headers into your web servers response. Without going to much
+into detail here, the aim of this blog post is to give you a basic NGINX configuration.
+For more detailed information visit &lt;a href=&#34;https://scotthelme.co.uk/&#34;&gt;Scott Helme&amp;rsquo;s blog&lt;/a&gt;.
+He did a pretty good job explaining all different types of HTTP security headers.&lt;/p&gt;
+
+&lt;h2 id=&#34;x-frame-options:7716eaf7b90e07d9cbf4fc81df028463&#34;&gt;X-Frame-Options&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;X-Frame-Options&lt;/code&gt; specifies whether your browser allows framing your site
+into another site. You can &lt;code&gt;DENY&lt;/code&gt;, allow only from &lt;code&gt;SAMEORIGIN&lt;/code&gt; or
+&lt;code&gt;ALLOW-FROM https://a.specific.site.com/&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;add_header X-Frame-Options SAMEORIGIN;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;x-content-type-options:7716eaf7b90e07d9cbf4fc81df028463&#34;&gt;X-Content-Type-Options&lt;/h2&gt;
+
+&lt;p&gt;With &lt;code&gt;nosniff&lt;/code&gt; your browser is enforced to use the content-type declared by
+your server. It helps reducing the risk of so-called drive-by downloads.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;add_header X-Content-Type-Options nosniff;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;x-xss-protection:7716eaf7b90e07d9cbf4fc81df028463&#34;&gt;X-XSS-Protection&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;X-XSS-Protection&lt;/code&gt; enables Cross-site scripting (XSS) filter built-in into most browsers.
+Although this option is enabled by default, it&amp;rsquo;s recommend to re-enable and hence reduce the risk
+in which malicious scripts are injected to your site.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;add_header X-XSS-Protection &amp;quot;1; mode=block&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;content-security-policy:7716eaf7b90e07d9cbf4fc81df028463&#34;&gt;Content-Security-Policy&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt; defines approved sources your browser may load content from.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;add_header Content-Security-Policy &amp;quot;default-src https:
+    data: &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;;&amp;quot; always;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;strict-transport-security:7716eaf7b90e07d9cbf4fc81df028463&#34;&gt;Strict-Transport-Security&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;Strict-Transport-Security&lt;/code&gt; enforces your browser to use HTTPS over regular HTTP.
+Use HTTPS over HTTP everywhere and anytime. Even if it&amp;rsquo;s a simple personal blog.
+You can get a free SSL certificate at &lt;a href=&#34;https://www.startssl.com/&#34;&gt;StartCom&lt;/a&gt;.
+Not long ago, Google also started favoring HTTPS sites in search results.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;add_header Strict-Transport-Security &amp;quot;max-age=31536000;
+    includeSubdomains&amp;quot; always;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;public-key-pins:7716eaf7b90e07d9cbf4fc81df028463&#34;&gt;Public-Key-Pins&lt;/h2&gt;
+
+&lt;p&gt;With &lt;code&gt;Public-Key-Pins&lt;/code&gt; your able to tell your browser in which identities he should trust.
+It protects your site from man-in-the-middle attacks and in case if your certificate authority is compromised.
+The easiest way to get your appropriate key-pins is by running a test at
+&lt;a href=&#34;https://www.ssllabs.com/ssltest/&#34;&gt;SSL LABS&lt;/a&gt;.
+The pins are part of the result.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;add_header Public-Key-Pins &#39;pin-sha256=&amp;quot;xxx&amp;quot;; pin-sha256=&amp;quot;yyy&amp;quot;;
+    pin-sha256=&amp;quot;zzz&amp;quot;; max-age=2592000; includeSubDomains&#39; always;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Redirect HTTP to HTTPS with URL rewrite module in IIS</title>
@@ -26,7 +108,8 @@
 &lt;/figure&gt;
 
 
-&lt;p&gt;First download &lt;a href=&#34;http://go.microsoft.com/fwlink/?LinkId=255386&#34;&gt;Microsofts Web Platform Installer 5.0&lt;/a&gt;. It&amp;rsquo;s a free tool that makes getting the latest components for Internet Information Services (IIS) easy. In Web Platform Installer search for &amp;lsquo;url rewrite&amp;rsquo; and and install the one and only search result &amp;lsquo;URL Rewrite 2.0&amp;rsquo;. Restart IIS in order to make URL Rewrite module visible as shown below.&lt;/p&gt;
+&lt;p&gt;First download &lt;a href=&#34;http://go.microsoft.com/fwlink/?LinkId=255386&#34;&gt;Microsofts Web Platform Installer 5.0&lt;/a&gt;.
+It&amp;rsquo;s a free tool that makes getting the latest components for Internet Information Services (IIS) easy. In Web Platform Installer search for &amp;lsquo;url rewrite&amp;rsquo; and and install the one and only search result &amp;lsquo;URL Rewrite 2.0&amp;rsquo;. Restart IIS in order to make URL Rewrite module visible as shown below.&lt;/p&gt;
 
 
 &lt;figure class=&#34;img-responsive center-block&#34;&gt;

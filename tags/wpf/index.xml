@@ -17,7 +17,9 @@
       <pubDate>Wed, 17 Feb 2016 18:24:49 +0100</pubDate>
       <author>oliver.gut@flenny.net (Oliver Gut)</author>
       <guid>https://ping.flenny.net/2016/toggle-wpf-control-visibility-with-datatriggers/</guid>
-      <description>&lt;p&gt;A frequent source of error while working with triggers is that I set the default value directly on the control itself (e.g. Label). Now when trying to change the value with a trigger that unfortunately won&amp;rsquo;t work. &lt;strong&gt;The default value has to be set in the control&amp;rsquo;s style&lt;/strong&gt; as shown in the example below.&lt;/p&gt;
+      <description>&lt;p&gt;A frequent source of error while working with triggers is that I set the default value directly on the
+control itself (e.g. Label). Now when trying to change the value with a trigger that unfortunately won&amp;rsquo;t
+work. &lt;strong&gt;The default value has to be set in the control&amp;rsquo;s style&lt;/strong&gt; as shown in the example below.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-aspnet&#34;&gt;&amp;lt;Window x:Class=&amp;quot;FlennyNET.Examples.DataTrigger.MainWindow&amp;quot;
         xmlns=&amp;quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&amp;quot;

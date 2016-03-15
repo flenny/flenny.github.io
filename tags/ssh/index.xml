@@ -17,7 +17,9 @@
       <pubDate>Sun, 31 Jan 2016 22:31:43 +0100</pubDate>
       <author>oliver.gut@flenny.net (Oliver Gut)</author>
       <guid>https://ping.flenny.net/2016/disable-ssh-connections-over-ipv6/</guid>
-      <description>&lt;p&gt;If a network interface offers IPv4 as well as IPv6, by default ubuntu&amp;rsquo;s SSH server listens on both IP versions. In order to restrict access to protocol version 4 you have to comment in the line &lt;code&gt;#ListenAddress 0.0.0.0&lt;/code&gt; in your &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;If a network interface offers IPv4 as well as IPv6, by default ubuntu&amp;rsquo;s SSH server listens on both IP
+versions. In order to restrict access to protocol version 4 you have to comment in the line
+&lt;code&gt;#ListenAddress 0.0.0.0&lt;/code&gt; in your &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-vim&#34;&gt;#ListenAddress ::
 ListenAddress 0.0.0.0

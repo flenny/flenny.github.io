@@ -83,7 +83,9 @@
 &lt;/figure&gt;
 
 
-&lt;p&gt;By default LXC container templates are not available after installing Proxmox Virtual Environment (PVE). In order to enable templates for Ubuntu, Joomla, OwnCloud, WordRress or OpenVPN run the following command on your host&amp;rsquo;s console.&lt;/p&gt;
+&lt;p&gt;By default LXC container templates are not available after installing Proxmox Virtual Environment (PVE).
+In order to enable templates for Ubuntu, Joomla, OwnCloud, WordRress or OpenVPN run the following command
+on your host&amp;rsquo;s console.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pveam update
 &lt;/code&gt;&lt;/pre&gt;
