@@ -31,7 +31,8 @@
 &lt;p&gt;In order to make your site a more secure place, it&amp;rsquo;s recommended to add
 some HTTP security headers into your web servers response. Without going to much
 into detail here, the aim of this blog post is to give you a basic NGINX configuration.
-For more detailed information visit &lt;a href=&#34;https://scotthelme.co.uk/&#34;&gt;Scott Helme&amp;rsquo;s blog&lt;/a&gt;.
+For more detailed information visit 
+&lt;a target=&#34;_blank&#34; href=&#34;https://scotthelme.co.uk/&#34;&gt;Scott Helme&amp;rsquo;s blog&lt;/a&gt; &lt;i class=&#34;fa fa-external-link&#34;&gt;&lt;/i&gt;.
 He did a pretty good job explaining all different types of HTTP security headers.&lt;/p&gt;
 
 &lt;h2 id=&#34;x-frame-options:7716eaf7b90e07d9cbf4fc81df028463&#34;&gt;X-Frame-Options&lt;/h2&gt;
@@ -72,7 +73,8 @@ in which malicious scripts are injected to your site.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;Strict-Transport-Security&lt;/code&gt; enforces your browser to use HTTPS over regular HTTP.
 Use HTTPS over HTTP everywhere and anytime. Even if it&amp;rsquo;s a simple personal blog.
-You can get a free SSL certificate at &lt;a href=&#34;https://www.startssl.com/&#34;&gt;StartCom&lt;/a&gt;.
+You can get a free SSL certificate at 
+&lt;a target=&#34;_blank&#34; href=&#34;https://www.startssl.com/&#34;&gt;StartCom&lt;/a&gt; &lt;i class=&#34;fa fa-external-link&#34;&gt;&lt;/i&gt;.
 Not long ago, Google also started favoring HTTPS sites in search results.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;add_header Strict-Transport-Security &amp;quot;max-age=31536000;
@@ -84,7 +86,8 @@ Not long ago, Google also started favoring HTTPS sites in search results.&lt;/p&
 &lt;p&gt;With &lt;code&gt;Public-Key-Pins&lt;/code&gt; your able to tell your browser in which identities he should trust.
 It protects your site from man-in-the-middle attacks and in case if your certificate authority is compromised.
 The easiest way to get your appropriate key-pins is by running a test at
-&lt;a href=&#34;https://www.ssllabs.com/ssltest/&#34;&gt;SSL LABS&lt;/a&gt;.
+
+&lt;a target=&#34;_blank&#34; href=&#34;https://www.ssllabs.com/ssltest/&#34;&gt;SSL LABS&lt;/a&gt; &lt;i class=&#34;fa fa-external-link&#34;&gt;&lt;/i&gt;.
 The pins are part of the result.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-nginx&#34;&gt;add_header Public-Key-Pins &#39;pin-sha256=&amp;quot;xxx&amp;quot;; pin-sha256=&amp;quot;yyy&amp;quot;;
