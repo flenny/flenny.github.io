@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Server on ping.flenny.net</title>
+    <link>https://ping.flenny.net/tags/windows-server/</link>
+    <description>Recent content in Windows Server on ping.flenny.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>oliver.gut@flenny.net (Oliver Gut)</managingEditor>
+    <webMaster>oliver.gut@flenny.net (Oliver Gut)</webMaster>
+    <lastBuildDate>Thu, 21 Apr 2016 15:59:12 +0200</lastBuildDate>
+    <atom:link href="https://ping.flenny.net/tags/windows-server/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Fix WSUS &#39;unexpected error&#39; in MMC after installing Windows updates</title>
+      <link>https://ping.flenny.net/2016/fix-wsus-unexpected-error-in-mmc-after-installing-windows-updates/</link>
+      <pubDate>Thu, 21 Apr 2016 15:59:12 +0200</pubDate>
+      <author>oliver.gut@flenny.net (Oliver Gut)</author>
+      <guid>https://ping.flenny.net/2016/fix-wsus-unexpected-error-in-mmc-after-installing-windows-updates/</guid>
+      <description>
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/wsus-error.png&#34; alt=&#34;wsus error&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;After installing the latest Windows updates, WSUS Update Services MMC console gave me a nice &amp;lsquo;Error: Unexpected Error&amp;rsquo; message. Removing and reconnecting the server in MMC, didn&amp;rsquo;t help. Neither restarting &amp;lsquo;WSUS Service&amp;rsquo; nor rebooting the server solved the problem. According to &lt;a href=&#34;http://blogs.technet.com/b/wsus/archive/2016/04/20/known-issues-with-kb3148812.aspx&#34;&gt;this&lt;/a&gt; article KB3148812, which was released last Tuesday, broke Windows Server Update Services (WSUS). Uninstalling this specific update and rebooting the server fixed the problem.&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/wsus-remove-update.png&#34; alt=&#34;remove windows update&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
