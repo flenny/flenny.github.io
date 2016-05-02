@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Remote Desktop on ping.flenny.net</title>
+    <link>https://ping.flenny.net/tags/remote-desktop/</link>
+    <description>Recent content in Remote Desktop on ping.flenny.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>oliver.gut@flenny.net (Oliver Gut)</managingEditor>
+    <webMaster>oliver.gut@flenny.net (Oliver Gut)</webMaster>
+    <lastBuildDate>Mon, 02 May 2016 20:33:06 +0200</lastBuildDate>
+    <atom:link href="https://ping.flenny.net/tags/remote-desktop/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cropped Remote Desktop fullscreen mode in Mac OS X</title>
+      <link>https://ping.flenny.net/2016/cropped-remote-desktop-rdp-fullscreen-mode-in-mac-os-x/</link>
+      <pubDate>Mon, 02 May 2016 20:33:06 +0200</pubDate>
+      <author>oliver.gut@flenny.net (Oliver Gut)</author>
+      <guid>https://ping.flenny.net/2016/cropped-remote-desktop-rdp-fullscreen-mode-in-mac-os-x/</guid>
+      <description>
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/rdp_banner.png&#34; alt=&#34;Microsoft Remote Desktop connection&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+
+&lt;p&gt;When adding a new Remote Desktop connection using the official Microsoft Mac App Store
+
+&lt;a target=&#34;_blank&#34; href=&#34;https://itunes.apple.com/en/app/microsoft-remote-desktop/id715768417?mt=12&#34;&gt;Remote Desktop&lt;/a&gt; &lt;i class=&#34;fa fa-external-link&#34;&gt;&lt;/i&gt; app
+on my MacBook, the default value for full screen mode is to use all available monitors.
+This results in a few pixels missing on top of the screen. Disabling this option will fix this issue.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
