@@ -3,18 +3,18 @@
   
   <url>
     <loc>https://ping.flenny.net/</loc>
-    <lastmod>2016-05-02T20:33:06+02:00</lastmod>
+    <lastmod>2016-07-04T15:59:12+02:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ping.flenny.net/2016/fix-wsus-unexpected-error-in-mmc-after-installing-windows-updates/</loc>
+    <lastmod>2016-07-04T15:59:12+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://ping.flenny.net/2016/cropped-remote-desktop-rdp-fullscreen-mode-in-mac-os-x/</loc>
     <lastmod>2016-05-02T20:33:06+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ping.flenny.net/2016/fix-wsus-unexpected-error-in-mmc-after-installing-windows-updates/</loc>
-    <lastmod>2016-04-21T15:59:12+02:00</lastmod>
   </url>
   
   <url>
