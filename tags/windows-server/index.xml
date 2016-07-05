@@ -26,10 +26,10 @@
 &lt;/figure&gt;
 
 
-&lt;p&gt;After installing the latest Windows updates, WSUS Update Services MMC console gave me a nice &amp;lsquo;Error: Unexpected Error&amp;rsquo; message. Removing and reconnecting the server in MMC, didn&amp;rsquo;t help. Neither restarting &amp;lsquo;WSUS Service&amp;rsquo; nor rebooting the server solved the problem. According to 
-&lt;a target=&#34;_blank&#34; href=&#34;http://blogs.technet.com/b/wsus/archive/2016/04/20/known-issues-with-kb3148812.aspx&#34;&gt;this&lt;/a&gt; &lt;i class=&#34;fa fa-external-link&#34;&gt;&lt;/i&gt; article KB3148812 or KB3159706, which recently was released, broke Windows Server Update Services (WSUS). Uninstalling this specific update and rebooting the server fixed the problem.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Update 4/7/2016: Same issue with KB3159706.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;After installing the latest Windows updates, WSUS Update Services MMC console gave me a nice &amp;lsquo;Error: Unexpected Error&amp;rsquo; message. Removing and reconnecting the server in MMC, didn&amp;rsquo;t help. Neither restarting &amp;lsquo;WSUS Service&amp;rsquo; nor rebooting the server solved the problem. According to 
+&lt;a target=&#34;_blank&#34; href=&#34;http://blogs.technet.com/b/wsus/archive/2016/04/20/known-issues-with-kb3148812.aspx&#34;&gt;this&lt;/a&gt; &lt;i class=&#34;fa fa-external-link&#34;&gt;&lt;/i&gt; article Windows update KB3148812, which recently was released, broke Windows Server Update Services (WSUS). Uninstalling this specific update and rebooting the server fixed the problem.&lt;/p&gt;
 
 &lt;p&gt;
 &lt;figure class=&#34;img-responsive center-block&#34;&gt;
