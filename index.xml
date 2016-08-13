@@ -8,8 +8,26 @@
     <language>en-us</language>
     <managingEditor>oliver.gut@flenny.net (Oliver Gut)</managingEditor>
     <webMaster>oliver.gut@flenny.net (Oliver Gut)</webMaster>
-    <lastBuildDate>Tue, 12 Jul 2016 13:58:36 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 12 Aug 2016 08:17:24 +0200</lastBuildDate>
     <atom:link href="https://ping.flenny.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Nachrichten in WhatsApp zitieren</title>
+      <link>https://ping.flenny.net/snippets/quote-messages-in-whatsapp/</link>
+      <pubDate>Fri, 12 Aug 2016 08:17:24 +0200</pubDate>
+      <author>oliver.gut@flenny.net (Oliver Gut)</author>
+      <guid>https://ping.flenny.net/snippets/quote-messages-in-whatsapp/</guid>
+      <description>&lt;p&gt;Um in WhatsApp einzelne Nachrichen zu zitieren, einfach lange auf die gewünschte Nachricht tippen und im aufpoppenden Menü das &amp;lsquo;Antworten&amp;rsquo;-Symbol tippen. Ideal um in Gruppen-Chats auf ältere Aussagen oder Fragen Stellung zu nehmen.
+
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/snippets/quotewamessage.png&#34; alt=&#34;Nachrichen in WhatsApp zitieren&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Vodafone NL - Europa Prepaid Daten SIM-Karte ohne zusätzliche Roaming Gebühren</title>
