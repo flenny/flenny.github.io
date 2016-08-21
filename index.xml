@@ -8,8 +8,31 @@
     <language>en-us</language>
     <managingEditor>oliver.gut@flenny.net (Oliver Gut)</managingEditor>
     <webMaster>oliver.gut@flenny.net (Oliver Gut)</webMaster>
-    <lastBuildDate>Fri, 12 Aug 2016 08:17:24 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 21 Aug 2016 21:00:23 +0200</lastBuildDate>
     <atom:link href="https://ping.flenny.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Fix 0xc0000605 winload.efi boot error in Windows 10</title>
+      <link>https://ping.flenny.net/2016/fix-windows-10-0xc000060--winload-efi-boot-error/</link>
+      <pubDate>Sun, 21 Aug 2016 21:00:23 +0200</pubDate>
+      <author>oliver.gut@flenny.net (Oliver Gut)</author>
+      <guid>https://ping.flenny.net/2016/fix-windows-10-0xc000060--winload-efi-boot-error/</guid>
+      <description>&lt;p&gt;On my Windows 10 workstation I subscribed to the Insider Preview program in order to get the latest and greatest Windows builds. Unfortunately, I ignored several Windows notifications, which were trying to tell me to update my current Preview build to the latest build available. Otherwise I&amp;rsquo;m not able to use the system anymore.&lt;/p&gt;
+
+&lt;p&gt;These days I got a blue screen (surprise), telling me that a component of the operation system has expired.&lt;/p&gt;
+
+&lt;p&gt;The only way to get out of this awkward situation, was to turn back time in Bios. Windows started as expected. After upgrading Windows to the latest build, blue screen has gone.&lt;/p&gt;
+
+
+&lt;figure class=&#34;img-responsive center-block&#34;&gt;
+    
+        &lt;img src=&#34;https://ping.flenny.net/images/post/winload-efi-boot-error.jpg&#34; alt=&#34;0xc0000605 winload.efi boot error&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+
+</description>
+    </item>
     
     <item>
       <title>Nachrichten in WhatsApp zitieren</title>
